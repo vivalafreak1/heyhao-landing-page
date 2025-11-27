@@ -204,77 +204,57 @@
       </div>
 
       <!-- Dashboard Preview Wrapper -->
-      <div class="relative w-full max-w-[1176px] mx-auto mt-[52px]">
-        <!-- Background Glow (existing) -->
+           
+      <div
+        class="relative w-[calc(100%+104px)] -mx-[52px] mt-[52px] flex justify-center"
+      >
+        <!-- Fixed frame size on md+ (1176 x 774), responsive ratio below md -->
         <div
-          class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-[#1B2340] opacity-5 blur-[60px] rounded-full -z-10"
-        ></div>
-
-        <!-- Container for the 3 images -->
-        <!-- We use aspect-ratio to maintain the 1176x774 proportion responsively -->
-        <div class="relative w-full aspect-[1176/774]">
+          class="relative w-full max-w-[1176px] aspect-[1176/774] md:w-[1176px] md:h-[774px] md:aspect-auto"
+        >
+          <!-- Background Glow -->
+          <div
+            class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-[#1B2340] opacity-5 blur-[60px] rounded-full -z-20"
+          ></div>
           <!-- 1. Message Page (Base) -->
-          <!-- Positioned relative to container: x=41 y=64 (approx 3.5% left, 8.3% top) -->
-          <div class="absolute left-[3.5%] top-[8.3%] w-[93%] z-10">
-            <!-- Shadow: 1B3266 opacity 5% -->
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[93%] md:w-[1094px] z-10"
+          >
             <div
               class="absolute inset-0 rounded-xl shadow-[0_20px_50px_rgba(27,50,102,0.05)]"
             ></div>
             <img
               src="src/assets/images/thumbnail/message-page.png"
               alt="Message Interface"
-              class="w-full h-auto rounded-xl"
+              class="w-full h-full rounded-xl object-cover"
             />
           </div>
 
           <!-- 2. Insight Img (Floating Left) -->
-          <!-- Positioned: x=0 y=0 -->
-          <!-- Width: 285px is approx 24% of container width -->
-          <div class="absolute left-0 top-0 w-[24%] z-20 hidden md:block">
-            <!-- Shadow: 1B2340 20% blur -->
+          <div class="absolute left-0 top-[-4%] w-[24%] z-20 hidden md:block">
             <div
-              class="absolute -bottom-4 -right-4 w-full h-full bg-[#1B2340] opacity-20 blur-[30px] rounded-xl -z-10"
+              class="absolute -bottom-2 -right-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
             ></div>
             <img
               src="src/assets/images/thumbnail/insight-img.png"
               alt="Insight Card"
-              class="w-full h-auto rounded-[24px] shadow-lg"
+              class="w-full h-auto rounded-[24px] shadow-md object-cover"
             />
           </div>
 
           <!-- 3. Revenue Img (Floating Right) -->
-          <!-- Positioned: x=831 y=408 -->
-          <!-- Left: 831/1176 ≈ 70.6%. Top: 408/774 ≈ 52.7% -->
-          <!-- Width: 345px is approx 29% of container width -->
           <div
-            class="absolute left-[70.6%] top-[52.7%] w-[29%] z-30 hidden md:block"
+            class="absolute left-[70.6%] top-[50.7%] w-[29%] z-30 hidden md:block"
           >
-            <!-- Shadow: 1B2340 20% blur (left top) -->
             <div
-              class="absolute -top-4 -left-4 w-full h-full bg-[#1B2340] opacity-20 blur-[30px] rounded-xl -z-10"
+              class="absolute -top-2 -left-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
             ></div>
             <img
               src="src/assets/images/thumbnail/revenue-img.png"
               alt="Revenue Card"
-              class="w-full h-auto rounded-[24px] shadow-lg"
+              class="w-full h-auto rounded-[24px] shadow-md object-cover"
             />
           </div>
-        </div>
-
-        <!-- Mobile View: Stack them vertically if screen is too small for complex overlap -->
-        <!-- Or simply hide the floating cards on very small screens (as done above with hidden md:block) -->
-        <!-- If you want them visible on mobile, you'd need to stack them below: -->
-        <div class="md:hidden flex flex-col gap-4 mt-4 px-4">
-          <img
-            src="src/assets/images/thumbnail/insight-img.png"
-            alt="Insight Card"
-            class="w-full shadow-lg rounded-xl"
-          />
-          <img
-            src="src/assets/images/thumbnail/revenue-img.png"
-            alt="Revenue Card"
-            class="w-full shadow-lg rounded-xl"
-          />
         </div>
       </div>
     </header>
@@ -307,7 +287,7 @@
           <div class="flex w-max gap-8 slider-row--right">
             <!-- Olivia -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -340,7 +320,7 @@
 
             <!-- Nabila -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -373,7 +353,7 @@
 
             <!-- Liam -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -407,7 +387,7 @@
             <!-- DUPLICATE 3 CARDS FOR SEAMLESS LOOP -->
             <!-- Olivia copy -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -440,7 +420,7 @@
 
             <!-- Nabila copy -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -473,7 +453,7 @@
 
             <!-- Liam copy -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -511,7 +491,7 @@
           <div class="flex w-max gap-8 slider-row--left">
             <!-- Sarah -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -544,7 +524,7 @@
 
             <!-- James -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -577,7 +557,7 @@
 
             <!-- Ethan -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -609,7 +589,7 @@
             <!-- DUPLICATE 3 CARDS FOR SEAMLESS LOOP -->
             <!-- Sarah copy -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -642,7 +622,7 @@
 
             <!-- James copy -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
@@ -675,7 +655,7 @@
 
             <!-- Ethan copy -->
             <article
-              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-4 text-left"
+              class="flex-none w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
             >
               <div class="flex gap-1 text-[#FF5B29] flex gap-1">
                 <img src="src/assets/images/icons/star.svg" alt="bintang" />
