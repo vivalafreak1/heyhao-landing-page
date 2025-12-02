@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HeyHao Landing Page</title>
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Font Configuration -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800&display=swap");
 
       body {
         font-family: "Lexend Deca", sans-serif;
       }
 
+      /* Slider Animation Keyframes */
       @keyframes slide-right {
         0% {
           transform: translateX(-50%);
@@ -43,18 +46,24 @@
   </head>
 
   <body class="bg-white text-slate-900">
-    <nav class="w-full pt-[36px] px-[52px]">
+    <!-- =========================== -->
+    <!-- NAVIGATION                  -->
+    <!-- =========================== -->
+    <nav class="w-full pt-[36px] px-[20px] md:px-[52px] relative z-50">
       <div class="max-w-[1176px] mx-auto flex items-center justify-between">
+        <!-- Logo -->
         <div class="flex items-center gap-[12px]">
           <img
             src="src/assets/images/logos/logo-heyhao.svg"
             alt="HeyHao Logo"
-            class="w-[44px] h-[36px]"
+            class="w-[36px] h-[30px] md:w-[44px] md:h-[36px]"
           />
-          <span class="text-2xl font-bold text-black tracking-tight">
+          <span class="text-xl md:text-2xl font-bold text-black tracking-tight">
             HeyHao
           </span>
         </div>
+
+        <!-- Desktop Menu -->
         <ul class="hidden md:flex items-center gap-8">
           <li>
             <a
@@ -85,150 +94,193 @@
             >
           </li>
         </ul>
+
+        <!-- CTA Button -->
         <a
           href="#"
-          class="bg-[#E9EFFF] text-[#165DFF] font-semibold py-[16px] px-[32px] rounded-full hover:bg-blue-100 transition"
+          class="bg-[#E9EFFF] text-[#165DFF] font-semibold py-[12px] px-[24px] md:py-[16px] md:px-[32px] rounded-full hover:bg-blue-100 transition text-sm md:text-base"
         >
           My Account
         </a>
       </div>
     </nav>
 
-    <div class="relative w-full max-w-[1176px] mx-auto mt-[36px]">
+    <!-- =========================== -->
+    <!-- MAIN HERO WRAPPER           -->
+    <!-- =========================== -->
+    <!-- 
+      Wrapper ini menyatukan Background & Content agar layout stabil.
+      Kami menambahkan 'px-4' agar tidak mentok di layar HP.
+    -->
+    <div class="relative w-full max-w-[1176px] mx-auto mt-[36px] px-4 md:px-0">
+      <!-- A. BACKGROUND LAYER (Fixed Mobile Issue) -->
+      <!-- 
+         Saya menggunakan struktur "My Code" Anda, tapi menambahkan class responsive:
+         - w-[1177px] -> w-full md:w-[1177px] (agar pas di HP)
+         - left/top fixed -> menggunakan % di mobile
+      -->
       <div
-        class="absolute left-[67px] -top-[374px] w-[1177px] h-[1177px] z-[-1] pointer-events-none"
+        class="absolute left-0 top-0 w-full md:w-[1176px] h-[600px] md:h-[999px] rounded-[30px] md:rounded-[50px] overflow-hidden -z-10"
       >
-        <div class="glowing-circle w-full h-full rounded-full"></div>
-      </div>
-      <div
-        class="absolute left-0 top-0 w-[1176px] h-[999px] rounded-[50px] overflow-hidden -z-10"
-      >
+        <!-- Gradient -->
         <div
           class="absolute inset-0 bg-gradient-to-b from-[#F7F9FF] to-[#F7F9FF]/0"
         ></div>
+
+        <!-- Glowing Circle 1 -->
         <div
-          class="absolute w-[1177px] h-[1177px] left-[33px] -top-[152px] rounded-full border-[50px] border-[#165DFF]/20 blur-[80px]"
+          class="absolute -left-[20%] -top-[20%] md:left-[67px] md:-top-[374px] w-[150%] md:w-[1177px] h-[150%] md:h-[1177px] pointer-events-none"
+        >
+          <div
+            class="w-full h-full rounded-full border-[20px] md:border-[50px] border-transparent blur-[40px] md:blur-[60px] bg-[linear-gradient(#fff,#fff)_padding-box,linear-gradient(180deg,rgba(22,93,255,0.21)_0%,rgba(22,93,255,0.03)_100%)_border-box]"
+          ></div>
+        </div>
+
+        <!-- Glowing Circle 2 -->
+        <div
+          class="absolute w-[120%] md:w-[1177px] h-[120%] md:h-[1177px] -left-[10%] md:left-[33px] -top-[10%] md:-top-[152px] rounded-full border-[20px] md:border-[50px] border-[#165DFF]/20 blur-[40px] md:blur-[80px] pointer-events-none"
         ></div>
       </div>
-    </div>
 
-    <header
-      class="relative z-10 w-full max-w-[1176px] mx-auto px-[52px] text-center"
-    >
-      <div
-        class="inline-flex items-center gap-2 bg-[#0B0F19] text-white px-[24px] py-[16px] rounded-full mb-[30px] mt-[80px]"
+      <!-- B. CONTENT HEADER (Restored Your Original Image Logic) -->
+      <!-- pt-[80px] memberi jarak agar teks turun (pengganti margin-top) -->
+      <header
+        class="relative z-10 w-full text-center pt-[60px] md:pt-[80px] pb-[100px]"
       >
-        <img
-          src="src/assets/images/icons/crown.svg"
-          alt="crown"
-          class="w-[24px] h-[24px]"
-        />
-        <span class="font-semibold text-base md:text-[100sp]">
-          Step Into the Next Messaging Age
-        </span>
-      </div>
-
-      <div class="text-center mb-[32px]">
-        <div class="flex items-center justify-center gap-x-[8px]">
-          <h1
-            class="text-4xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
-          >
-            Build Your Community
-          </h1>
-          <img
-            src="src/assets/images/photos/grupmember-1.png"
-            alt="Happy Users"
-            class="shrink-0"
-          />
-        </div>
-
-        <h1
-          class="text-4xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
+        <!-- 1. Badge -->
+        <div
+          class="inline-flex items-center gap-2 bg-[#0B0F19] text-white px-[24px] py-[16px] rounded-full mb-[30px]"
         >
-          Make New Revenue Stream
-        </h1>
-      </div>
-
-      <p
-        class="text-[#6A7686] leading-relaxed max-w-2xl mx-auto mb-[54px] text-center text-base font-medium"
-      >
-        Be Part of or Build Communities That Empower You to Network, Learn,
-        <br class="hidden md:block" />
-        and Achieve Career Milestones Faster
-      </p>
-
-      <div
-        class="flex flex-col md:flex-row items-center justify-center gap-4 mb-[52px]"
-      >
-        <a
-          href="#"
-          class="inline-flex items-center justify-center gap-[8px] bg-[#165DFF] text-white px-[36px] py-[20px] rounded-full text-[16px] font-medium hover:bg-blue-700 transition"
-        >
-          Get Started
           <img
-            src="src/assets/images/icons/arrow-right.svg"
-            alt="arrow up right"
+            src="src/assets/images/icons/crown.svg"
+            alt="crown"
             class="w-[24px] h-[24px]"
           />
-        </a>
+          <span class="font-semibold text-sm md:text-base"
+            >Step Into the Next Messaging Age</span
+          >
+        </div>
 
-        <a
-          href="#testimonials"
-          class="inline-flex items-center justify-center bg-[#E5F0FF] text-[#165DFF] px-[36px] py-[22px] rounded-full text-base font-bold hover:bg-blue-100 transition"
+        <!-- 2. Headline -->
+        <div class="text-center mb-[32px]">
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-x-[8px]"
+          >
+            <h1
+              class="text-3xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
+            >
+              Build Your Community
+            </h1>
+            <!-- Gambar avatar member (hidden di mobile jika perlu, atau biarkan) -->
+            <img
+              src="src/assets/images/photos/grupmember-1.png"
+              alt="Happy Users"
+              class="h-[40px] md:h-auto mt-2 md:mt-0 shrink-0"
+            />
+          </div>
+          <h1
+            class="text-3xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
+          >
+            Make New Revenue Stream
+          </h1>
+        </div>
+
+        <!-- 3. Subtext -->
+        <p
+          class="text-[#6A7686] leading-relaxed max-w-2xl mx-auto mb-[54px] text-center text-sm md:text-base font-medium px-2"
         >
-          View Testimony
-        </a>
-      </div>
+          Be Part of or Build Communities That Empower You to Network, Learn,
+          <br class="hidden md:block" />
+          and Achieve Career Milestones Faster
+        </p>
 
-      <div
-        class="relative w-[calc(100%+104px)] -mx-[52px] mt-[52px] flex justify-center"
-      >
+        <!-- 4. Buttons -->
         <div
-          class="relative w-full max-w-[1176px] aspect-[1176/774] md:w-[1176px] md:h-[774px] md:aspect-auto"
+          class="flex flex-col md:flex-row items-center justify-center gap-4 mb-[52px]"
+        >
+          <a
+            href="#"
+            class="w-full md:w-auto inline-flex items-center justify-center gap-[8px] bg-[#165DFF] text-white px-[36px] py-[20px] rounded-full text-[16px] font-medium hover:bg-blue-700 transition"
+          >
+            Get Started
+            <img
+              src="src/assets/images/icons/arrow-right.svg"
+              alt="arrow"
+              class="w-[24px] h-[24px]"
+            />
+          </a>
+          <a
+            href="#testimonials"
+            class="w-full md:w-auto inline-flex items-center justify-center bg-[#E5F0FF] text-[#165DFF] px-[36px] py-[22px] rounded-full text-base font-bold hover:bg-blue-100 transition"
+          >
+            View Testimony
+          </a>
+        </div>
+
+        <!-- 5. IMAGE SECTION (Restored Your Exact Code Logic) -->
+        <!-- 
+           Kita kembalikan logika 'w-[calc(100%+104px)]' agar gambar Insight/Revenue bisa 'breakout' (keluar jalur).
+           NAMUN: Di mobile kita reset jadi 'w-full' supaya tidak horizontal scroll.
+        -->
+        <div
+          class="relative w-full md:w-[calc(100%+104px)] md:-mx-[52px] mt-[52px] flex justify-center"
         >
           <div
-            class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-[#1B2340] opacity-5 blur-[60px] rounded-full -z-20"
-          ></div>
-          <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[93%] md:w-[1094px] z-10"
+            class="relative w-full max-w-[1176px] aspect-[1176/774] md:w-[1176px] md:h-[774px] md:aspect-auto"
           >
+            <!-- Shadow Blur (Belakang Gambar) -->
             <div
-              class="absolute inset-0 rounded-xl shadow-[0_20px_50px_rgba(27,50,102,0.05)]"
+              class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-[#1B2340] opacity-5 blur-[60px] rounded-full -z-20"
             ></div>
-            <img
-              src="src/assets/images/thumbnail/message-page.png"
-              alt="Message Interface"
-              class="w-full h-full rounded-xl object-cover"
-            />
-          </div>
 
-          <div class="absolute left-0 top-[-4%] w-[24%] z-20 hidden md:block">
+            <!-- Main Image Wrapper -->
             <div
-              class="absolute -bottom-2 -right-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
-            ></div>
-            <img
-              src="src/assets/images/thumbnail/insight-img.png"
-              alt="Insight Card"
-              class="w-full h-auto rounded-[24px] shadow-md object-cover"
-            />
-          </div>
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[93%] md:w-[1094px] z-10"
+            >
+              <div
+                class="absolute inset-0 rounded-xl shadow-[0_20px_50px_rgba(27,50,102,0.05)]"
+              ></div>
+              <img
+                src="src/assets/images/thumbnail/message-page.png"
+                alt="Message Interface"
+                class="w-full h-full rounded-xl object-cover"
+              />
+            </div>
 
-          <div
-            class="absolute left-[70.6%] top-[50.7%] w-[29%] z-30 hidden md:block"
-          >
+            <!-- Insight Card (KIRI) - Your Original Positioning -->
+            <div class="absolute left-0 top-[-4%] w-[24%] z-20 hidden md:block">
+              <div
+                class="absolute -bottom-2 -right-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
+              ></div>
+              <img
+                src="src/assets/images/thumbnail/insight-img.png"
+                alt="Insight Card"
+                class="w-full h-auto rounded-[24px] shadow-md object-cover"
+              />
+            </div>
+
+            <!-- Revenue Card (KANAN) - Your Original Positioning -->
             <div
-              class="absolute -top-2 -left-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
-            ></div>
-            <img
-              src="src/assets/images/thumbnail/revenue-img.png"
-              alt="Revenue Card"
-              class="w-full h-auto rounded-[24px] shadow-md object-cover"
-            />
+              class="absolute left-[70.6%] top-[50.7%] w-[29%] z-30 hidden md:block"
+            >
+              <div
+                class="absolute -top-2 -left-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
+              ></div>
+              <img
+                src="src/assets/images/thumbnail/revenue-img.png"
+                alt="Revenue Card"
+                class="w-full h-auto rounded-[24px] shadow-md object-cover"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
 
+    <!-- =========================== -->
+    <!-- TESTIMONIALS SECTION        -->
+    <!-- =========================== -->
+    <!-- -mt-[150px] creates the overlap effect -->
     <section
       id="testimonials"
       class="relative w-full bg-[#080C1A] pt-[150px] pb-[100px] -mt-[329px] z-0"
