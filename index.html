@@ -14,7 +14,6 @@
 
       body {
         font-family: "Lexend Deca", sans-serif;
-        overflow-x: hidden; /* Mencegah scroll horizontal di HP */
       }
 
       /* Slider Animation Keyframes */
@@ -46,7 +45,7 @@
     </style>
   </head>
 
-  <body class="bg-white text-slate-900">
+  <body class="bg-white text-slate-900 overflow-x-hidden">
     <!-- =========================== -->
     <!-- NAVIGATION                  -->
     <!-- =========================== -->
@@ -113,806 +112,865 @@
       </div>
     </nav>
 
-    <!-- =========================== -->
-    <!-- HERO BACKGROUND WRAPPER     -->
-    <!-- =========================== -->
-    <div class="relative w-full max-w-[1176px] mx-auto mt-[36px] px-4 md:px-0">
-      <!-- 1. Glowing Circle (Kiri Atas) -->
+    <div class="w-full overflow-hidden">
+      <!-- =========================== -->
+      <!-- HERO BACKGROUND WRAPPER     -->
+      <!-- =========================== -->
       <div
-        class="absolute -left-[20%] -top-[10%] md:left-[67px] md:-top-[374px] w-[140%] md:w-[1177px] h-[140%] md:h-[1177px] z-[-1] pointer-events-none"
+        class="relative w-full max-w-[1176px] mx-auto mt-[36px] px-4 md:px-0"
       >
-        <!-- Tailwind conversion of .glowing-circle css -->
+        <!-- 1. Glowing Circle (Kiri Atas) -->
         <div
-          class="w-full h-full rounded-full border-[20px] md:border-[50px] border-transparent blur-[40px] md:blur-[60px] bg-[linear-gradient(#fff,#fff)_padding-box,linear-gradient(180deg,rgba(22,93,255,0.21)_0%,rgba(22,93,255,0.03)_100%)_border-box]"
-        ></div>
-      </div>
-
-      <!-- 2. Main Background Box (Gradient & Border) -->
-      <!-- Mobile: w-full h-[600px] | Desktop: w-[1176px] h-[999px] (Sesuai Referensi) -->
-      <div
-        class="absolute left-0 top-0 w-full md:w-[1176px] h-[600px] md:h-[999px] rounded-[30px] md:rounded-[50px] overflow-hidden -z-10"
-      >
-        <!-- Gradient Fill -->
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-[#F7F9FF] to-[#F7F9FF]/0"
-        ></div>
-
-        <!-- Inner Blue Circle Decor -->
-        <div
-          class="absolute w-[120%] md:w-[1177px] h-[120%] md:h-[1177px] -left-[10%] md:left-[33px] -top-[5%] md:-top-[152px] rounded-full border-[20px] md:border-[50px] border-[#165DFF]/20 blur-[40px] md:blur-[80px]"
-        ></div>
-      </div>
-    </div>
-
-    <!-- =========================== -->
-    <!-- HERO CONTENT HEADER         -->
-    <!-- =========================== -->
-    <!-- Mobile: px-5 | Desktop: px-[52px] (Sesuai Referensi) -->
-    <header
-      class="relative z-10 w-full max-w-[1176px] mx-auto px-5 md:px-[52px] text-center"
-    >
-      <!-- Badge -->
-      <div
-        class="inline-flex items-center gap-2 bg-[#0B0F19] text-white px-[24px] py-[16px] rounded-full mb-[30px] mt-[80px]"
-      >
-        <img
-          src="src/assets/images/icons/crown.svg"
-          alt="crown"
-          class="w-[24px] h-[24px]"
-        />
-        <span class="font-semibold text-base md:text-[100sp]"
-          >Step Into the Next Messaging Age</span
+          class="absolute -left-[20%] -top-[10%] md:left-[67px] md:-top-[374px] w-[140%] md:w-[1177px] h-[140%] md:h-[1177px] z-[-1] pointer-events-none"
         >
+          <!-- Tailwind conversion of .glowing-circle css -->
+          <div
+            class="w-full h-full rounded-full border-[20px] md:border-[50px] border-transparent blur-[40px] md:blur-[60px] bg-[linear-gradient(#fff,#fff)_padding-box,linear-gradient(180deg,rgba(22,93,255,0.21)_0%,rgba(22,93,255,0.03)_100%)_border-box]"
+          ></div>
+        </div>
+
+        <!-- 2. Main Background Box (Gradient & Border) -->
+        <!-- Mobile: w-full h-[600px] | Desktop: w-[1176px] h-[999px] (Sesuai Referensi) -->
+        <div
+          class="absolute left-0 top-0 w-full md:w-[1176px] h-[600px] md:h-[999px] rounded-[30px] md:rounded-[50px] overflow-hidden -z-10"
+        >
+          <!-- Gradient Fill -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-[#F7F9FF] to-[#F7F9FF]/0"
+          ></div>
+
+          <!-- Inner Blue Circle Decor -->
+          <div
+            class="absolute w-[120%] md:w-[1177px] h-[120%] md:h-[1177px] -left-[10%] md:left-[33px] -top-[5%] md:-top-[152px] rounded-full border-[20px] md:border-[50px] border-[#165DFF]/20 blur-[40px] md:blur-[80px]"
+          ></div>
+        </div>
       </div>
 
-      <!-- Headline -->
-      <div class="text-center mb-[32px]">
+      <!-- =========================== -->
+      <!-- HERO CONTENT HEADER         -->
+      <!-- =========================== -->
+      <!-- Mobile: px-5 | Desktop: px-[52px] (Sesuai Referensi) -->
+      <header
+        class="relative z-10 w-full max-w-[1176px] mx-auto px-5 md:px-[52px] text-center"
+      >
+        <!-- Badge -->
         <div
-          class="flex flex-col md:flex-row items-center justify-center gap-x-[8px]"
+          class="inline-flex items-center gap-2 bg-[#0B0F19] text-white px-[24px] py-[16px] rounded-full mb-[30px] mt-[80px]"
         >
+          <img
+            src="src/assets/images/icons/crown.svg"
+            alt="crown"
+            class="w-[24px] h-[24px]"
+          />
+          <span class="font-semibold text-base md:text-[100sp]"
+            >Step Into the Next Messaging Age</span
+          >
+        </div>
+
+        <!-- Headline -->
+        <div class="text-center mb-[32px]">
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-x-[8px]"
+          >
+            <h1
+              class="text-4xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
+            >
+              Build Your Community
+            </h1>
+            <img
+              src="src/assets/images/photos/grupmember-1.png"
+              alt="Happy Users"
+              class="shrink-0 h-[40px] md:h-auto mt-2 md:mt-0"
+            />
+          </div>
           <h1
             class="text-4xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
           >
-            Build Your Community
+            Make New Revenue Stream
           </h1>
-          <img
-            src="src/assets/images/photos/grupmember-1.png"
-            alt="Happy Users"
-            class="shrink-0 h-[40px] md:h-auto mt-2 md:mt-0"
-          />
         </div>
-        <h1
-          class="text-4xl md:text-[52px] leading-[1.2] font-extrabold text-[#0B0F19]"
+
+        <!-- Subtext -->
+        <p
+          class="text-[#6A7686] leading-relaxed max-w-2xl mx-auto mb-[54px] text-center text-base font-medium"
         >
-          Make New Revenue Stream
-        </h1>
-      </div>
+          Be Part of or Build Communities That Empower You to Network, Learn,
+          <br class="hidden md:block" />
+          and Achieve Career Milestones Faster
+        </p>
 
-      <!-- Subtext -->
-      <p
-        class="text-[#6A7686] leading-relaxed max-w-2xl mx-auto mb-[54px] text-center text-base font-medium"
-      >
-        Be Part of or Build Communities That Empower You to Network, Learn,
-        <br class="hidden md:block" />
-        and Achieve Career Milestones Faster
-      </p>
-
-      <!-- Buttons -->
-      <div
-        class="flex flex-col md:flex-row items-center justify-center gap-4 mb-[52px]"
-      >
-        <!-- Tombol Get Started -->
-        <a
-          href="#"
-          class="inline-flex items-center justify-center gap-[8px] bg-[#165DFF] text-white px-[36px] py-[20px] rounded-full text-[16px] font-medium hover:bg-blue-700 transition-all duration-300 w-full md:w-auto"
+        <!-- Buttons -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-4 mb-[52px]"
         >
-          Get Started
-          <img
-            src="src/assets/images/icons/arrow-right.svg"
-            alt="arrow up right"
-            class="w-[24px] h-[24px]"
-          />
-        </a>
+          <!-- Tombol Get Started -->
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-[8px] bg-[#165DFF] text-white px-[36px] py-[20px] rounded-full text-[16px] font-medium hover:bg-blue-700 transition-all duration-300 w-full md:w-auto"
+          >
+            Get Started
+            <img
+              src="src/assets/images/icons/arrow-right.svg"
+              alt="arrow up right"
+              class="w-[24px] h-[24px]"
+            />
+          </a>
 
-        <!-- Tombol View Testimony -->
-        <a
-          href="#testimonials"
-          class="inline-flex items-center justify-center bg-[#E5F0FF] text-[#165DFF] px-[36px] py-[22px] rounded-full text-base font-bold hover:bg-blue-100 transition-all duration-300 w-full md:w-auto"
-        >
-          View Testimony
-        </a>
-      </div>
+          <!-- Tombol View Testimony -->
+          <a
+            href="#testimonials"
+            class="inline-flex items-center justify-center bg-[#E5F0FF] text-[#165DFF] px-[36px] py-[22px] rounded-full text-base font-bold hover:bg-blue-100 transition-all duration-300 w-full md:w-auto"
+          >
+            View Testimony
+          </a>
+        </div>
 
-      <!-- IMAGE SECTION -->
-      <!-- 
+        <!-- IMAGE SECTION -->
+        <!-- 
          Desktop: w-[calc(100%+104px)] -mx-[52px] (Sesuai Referensi - Teknik Breakout)
          Mobile: w-auto mx-0 (Agar tidak overflow)
       -->
-      <div
-        class="relative w-full md:w-[calc(100%+104px)] md:-mx-[52px] mt-[52px] flex justify-center"
-      >
         <div
-          class="relative w-full max-w-[1176px] aspect-[1176/774] md:w-[1176px] md:h-[774px] md:aspect-auto"
+          class="relative w-full md:w-[calc(100%+104px)] md:-mx-[52px] mt-[52px] flex justify-center"
         >
-          <!-- Shadow Blur -->
           <div
-            class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-[#1B2340] opacity-5 blur-[60px] rounded-full -z-20"
-          ></div>
-
-          <!-- Main Image Wrapper -->
-          <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[93%] md:w-[1094px] z-10"
+            class="relative w-full max-w-[1176px] aspect-[1176/774] md:w-[1176px] md:h-[774px] md:aspect-auto"
           >
+            <!-- Shadow Blur -->
             <div
-              class="absolute inset-0 rounded-xl shadow-[0_20px_50px_rgba(27,50,102,0.05)]"
+              class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-[#1B2340] opacity-5 blur-[60px] rounded-full -z-20"
             ></div>
-            <img
-              src="src/assets/images/thumbnail/message-page.png"
-              alt="Message Interface"
-              class="w-full h-full rounded-xl object-cover"
-            />
-          </div>
 
-          <!-- Insight Card (Floating) - Sesuai Referensi -->
-          <div class="absolute left-0 top-[-4%] w-[24%] z-20 hidden md:block">
+            <!-- Main Image Wrapper -->
             <div
-              class="absolute -bottom-2 -right-2 w-full h-full bg-[#1B2340] opacity-5 blur-[20px] rounded-xl -z-10"
-            ></div>
-            <img
-              src="src/assets/images/thumbnail/insight-img.png"
-              alt="Insight Card"
-              class="w-full h-auto rounded-[24px] shadow-md object-cover"
-            />
-          </div>
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[93%] md:w-[1094px] z-10"
+            >
+              <div
+                class="absolute inset-0 rounded-xl shadow-[0_20px_50px_rgba(27,50,102,0.05)]"
+              ></div>
+              <img
+                src="src/assets/images/thumbnail/message-page.png"
+                alt="Message Interface"
+                class="w-full h-full rounded-xl object-cover"
+              />
+            </div>
 
-          <!-- Revenue Card (Floating) - Sesuai Referensi -->
-          <div
-            class="absolute left-[70.6%] top-[50.7%] w-[29%] z-30 hidden md:block"
-          >
+            <!-- Insight Card (Floating) - Sesuai Referensi -->
+            <div class="absolute left-0 top-[-4%] w-[24%] z-20 hidden md:block">
+              <div
+                class="absolute -bottom-2 -right-2 w-full h-full bg-[#1B2340] opacity-5 blur-[20px] rounded-xl -z-10"
+              ></div>
+              <img
+                src="src/assets/images/thumbnail/insight-img.png"
+                alt="Insight Card"
+                class="w-full h-auto rounded-[24px] shadow-md object-cover"
+              />
+            </div>
+
+            <!-- Revenue Card (Floating) - Sesuai Referensi -->
             <div
-              class="absolute -top-2 -left-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
-            ></div>
-            <img
-              src="src/assets/images/thumbnail/revenue-img.png"
-              alt="Revenue Card"
-              class="w-full h-auto rounded-[24px] shadow-md object-cover"
-            />
+              class="absolute left-[70.6%] top-[50.7%] w-[29%] z-30 hidden md:block"
+            >
+              <div
+                class="absolute -top-2 -left-2 w-full h-full bg-[#1B2340] opacity-10 blur-[20px] rounded-xl -z-10"
+              ></div>
+              <img
+                src="src/assets/images/thumbnail/revenue-img.png"
+                alt="Revenue Card"
+                class="w-full h-auto rounded-[24px] shadow-md object-cover"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- =========================== -->
-    <!-- TESTIMONIALS SECTION        -->
-    <!-- =========================== -->
-    <!-- Margin negatif tetap sesuai referensi -->
-    <section
-      id="testimonials"
-      class="relative w-full bg-[#080C1A] pt-[150px] pb-[100px] -mt-[329px] z-0"
-    >
-      <div class="mx-auto text-center overflow-hidden">
-        <div class="mb-[52px] mt-[301px] px-5 md:px-[52px]">
-          <div class="inline-flex items-center gap-2 text-[#F97316] mb-4">
-            <img
-              src="src/assets/images/icons/lovely.svg"
-              alt="Lovely Icon"
-              class="w-[24px] h-[24px]"
-            />
-            <span class="font-medium text-[20px]">Happy Customers</span>
+      <!-- =========================== -->
+      <!-- TESTIMONIALS SECTION        -->
+      <!-- =========================== -->
+      <!-- Margin negatif tetap sesuai referensi -->
+      <section
+        id="testimonials"
+        class="relative w-full bg-[#080C1A] pt-[150px] pb-[100px] -mt-[329px] z-0"
+      >
+        <div class="mx-auto text-center overflow-hidden">
+          <div class="mb-[52px] mt-[301px] px-5 md:px-[52px]">
+            <div class="inline-flex items-center gap-2 text-[#F97316] mb-4">
+              <img
+                src="src/assets/images/icons/lovely.svg"
+                alt="Lovely Icon"
+                class="w-[24px] h-[24px]"
+              />
+              <span class="font-medium text-[20px]">Happy Customers</span>
+            </div>
+            <h2
+              class="text-[36px] md:text-4xl font-bold text-white leading-[1.6]"
+            >
+              Loved by Millions, Trusted by You
+            </h2>
           </div>
-          <h2
-            class="text-[36px] md:text-4xl font-bold text-white leading-[1.6]"
-          >
-            Loved by Millions, Trusted by You
-          </h2>
-        </div>
 
-        <!-- Slider Row 1 (Right) -->
-        <div class="relative overflow-hidden mb-8 w-full">
-          <!-- Tambahkan w-max agar kontainer memanjang otomatis -->
-          <div class="flex w-max gap-8 slider-row--right">
-            <!-- SET 1 (ORIGINAL) -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+          <!-- Slider Row 1 (Right) -->
+          <div class="relative overflow-hidden mb-8 w-full">
+            <!-- Tambahkan w-max agar kontainer memanjang otomatis -->
+            <div class="flex w-max gap-8 slider-row--right">
+              <!-- SET 1 (ORIGINAL) -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                It's more than just a messaging app—it's my go-to tool for
-                staying in touch.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Olivia Harris
-                  </h4>
-                  <p class="text-white text-sm">UI Designer</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-1.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  It's more than just a messaging app—it's my go-to tool for
+                  staying in touch.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Olivia Harris
+                    </h4>
+                    <p class="text-white text-sm">UI Designer</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-1.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
 
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                I can't imagine a day without using this app. It's reliable and
-                fast.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Nabila Reyna
-                  </h4>
-                  <p class="text-white text-sm">Product Manager</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-2.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  I can't imagine a day without using this app. It's reliable
+                  and fast.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Nabila Reyna
+                    </h4>
+                    <p class="text-white text-sm">Product Manager</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-2.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
 
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                The app's encryption gives me peace of mind. Secure and private.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Liam Walker
-                  </h4>
-                  <p class="text-white text-sm">Cyber Security</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-3.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  The app's encryption gives me peace of mind. Secure and
+                  private.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Liam Walker
+                    </h4>
+                    <p class="text-white text-sm">Cyber Security</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-3.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
 
-            <!-- SET 2 (CLONE) -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+              <!-- SET 2 (CLONE) -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                It's more than just a messaging app—it's my go-to tool for
-                staying in touch.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Olivia Harris
-                  </h4>
-                  <p class="text-white text-sm">UI Designer</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="foto"
-                  src="src/assets/images/photos/people-1.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  It's more than just a messaging app—it's my go-to tool for
+                  staying in touch.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Olivia Harris
+                    </h4>
+                    <p class="text-white text-sm">UI Designer</p>
+                  </div>
+                  <img
+                    alt="foto"
+                    src="src/assets/images/photos/people-1.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                I can't imagine a day without using this app. It's reliable and
-                fast.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Nabila Reyna
-                  </h4>
-                  <p class="text-white text-sm">Product Manager</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="foto"
-                  src="src/assets/images/photos/people-2.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  I can't imagine a day without using this app. It's reliable
+                  and fast.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Nabila Reyna
+                    </h4>
+                    <p class="text-white text-sm">Product Manager</p>
+                  </div>
+                  <img
+                    alt="foto"
+                    src="src/assets/images/photos/people-2.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                The app's encryption gives me peace of mind. Secure and private.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Liam Walker
-                  </h4>
-                  <p class="text-white text-sm">Cyber Security</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="orang"
-                  src="src/assets/images/photos/people-3.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  The app's encryption gives me peace of mind. Secure and
+                  private.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Liam Walker
+                    </h4>
+                    <p class="text-white text-sm">Cyber Security</p>
+                  </div>
+                  <img
+                    alt="orang"
+                    src="src/assets/images/photos/people-3.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
 
-            <!-- SET 3 (CLONE EXTRA FOR BIG SCREENS) -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+              <!-- SET 3 (CLONE EXTRA FOR BIG SCREENS) -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                It's more than just a messaging app—it's my go-to tool for
-                staying in touch.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Olivia Harris
-                  </h4>
-                  <p class="text-white text-sm">UI Designer</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="orang"
-                  src="src/assets/images/photos/people-1.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  It's more than just a messaging app—it's my go-to tool for
+                  staying in touch.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Olivia Harris
+                    </h4>
+                    <p class="text-white text-sm">UI Designer</p>
+                  </div>
+                  <img
+                    alt="orang"
+                    src="src/assets/images/photos/people-1.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                I can't imagine a day without using this app. It's reliable and
-                fast.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Nabila Reyna
-                  </h4>
-                  <p class="text-white text-sm">Product Manager</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="people"
-                  src="src/assets/images/photos/people-2.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  I can't imagine a day without using this app. It's reliable
+                  and fast.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Nabila Reyna
+                    </h4>
+                    <p class="text-white text-sm">Product Manager</p>
+                  </div>
+                  <img
+                    alt="people"
+                    src="src/assets/images/photos/people-2.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                The app's encryption gives me peace of mind. Secure and private.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Liam Walker
-                  </h4>
-                  <p class="text-white text-sm">Cyber Security</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="People"
-                  src="src/assets/images/photos/people-3.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  The app's encryption gives me peace of mind. Secure and
+                  private.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Liam Walker
+                    </h4>
+                    <p class="text-white text-sm">Cyber Security</p>
+                  </div>
+                  <img
+                    alt="People"
+                    src="src/assets/images/photos/people-3.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
 
-            <!-- SET 4 (FINAL CLONE FOR SAFETY) -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+              <!-- SET 4 (FINAL CLONE FOR SAFETY) -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left border border-[#2B3245]"
               >
-                It's more than just a messaging app—it's my go-to tool for
-                staying in touch.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Olivia Harris
-                  </h4>
-                  <p class="text-white text-sm">UI Designer</p>
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
                 </div>
-                <img
-                  alt="people"
-                  src="src/assets/images/photos/people-1.png"
-                  class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  It's more than just a messaging app—it's my go-to tool for
+                  staying in touch.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Olivia Harris
+                    </h4>
+                    <p class="text-white text-sm">UI Designer</p>
+                  </div>
+                  <img
+                    alt="people"
+                    src="src/assets/images/photos/people-1.png"
+                    class="w-12 h-12 rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- =========================== -->
+          <!-- SLIDER ROW 2 (LEFT)         -->
+          <!-- =========================== -->
+          <div class="relative overflow-hidden w-full">
+            <div class="flex w-max gap-8 slider-row--left">
+              <!-- ORIGINAL SET (Card 4, 5, 6) -->
+              <!-- Card 4 -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
+              >
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
+                </div>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  Seamless integration with my existing workflow. I can finally
+                  manage communities without headache.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Sarah Jenkins
+                    </h4>
+                    <p class="text-white text-sm">Community Lead</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-1.png"
+                    class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
+              >
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
+                </div>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  The analytics feature helped me grow my revenue by 30% in just
+                  two months. Highly recommended!
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      James Anderson
+                    </h4>
+                    <p class="text-white text-sm">Business Owner</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-2.png"
+                    class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
+              >
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
+                </div>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  Finally a platform that understands what creators need. No
+                  hidden fees, just pure value.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Ethan Hunt
+                    </h4>
+                    <p class="text-white text-sm">Content Creator</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-3.png"
+                    class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+
+              <!-- DUPLICATE SET (Agar tidak ada gap) -->
+              <!-- Clone Card 4 -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
+              >
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
+                </div>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  Seamless integration with my existing workflow. I can finally
+                  manage communities without headache.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Sarah Jenkins
+                    </h4>
+                    <p class="text-white text-sm">Community Lead</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-1.png"
+                    class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+
+              <!-- Clone Card 5 -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
+              >
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
+                </div>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  The analytics feature helped me grow my revenue by 30% in just
+                  two months. Highly recommended!
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      James Anderson
+                    </h4>
+                    <p class="text-white text-sm">Business Owner</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-2.png"
+                    class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+
+              <!-- Clone Card 6 -->
+              <article
+                class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
+              >
+                <div class="flex gap-1 text-[#FF5B29]">
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img
+                    alt="Bintang"
+                    src="src/assets/images/icons/star.svg"
+                  /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
+                </div>
+                <p
+                  class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
+                >
+                  Finally a platform that understands what creators need. No
+                  hidden fees, just pure value.
+                </p>
+                <hr class="w-full h-px border-0 bg-[#2B3245]" />
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-white font-semibold text-base">
+                      Ethan Hunt
+                    </h4>
+                    <p class="text-white text-sm">Content Creator</p>
+                  </div>
+                  <img
+                    alt="Bintang"
+                    src="src/assets/images/photos/people-3.png"
+                    class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
+                  />
+                </div>
+              </article>
+            </div>
           </div>
         </div>
-
-        <!-- =========================== -->
-        <!-- SLIDER ROW 2 (LEFT)         -->
-        <!-- =========================== -->
-        <div class="relative overflow-hidden w-full">
-          <div class="flex w-max gap-8 slider-row--left">
-            <!-- ORIGINAL SET (Card 4, 5, 6) -->
-            <!-- Card 4 -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
-              >
-                Seamless integration with my existing workflow. I can finally
-                manage communities without headache.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Sarah Jenkins
-                  </h4>
-                  <p class="text-white text-sm">Community Lead</p>
-                </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-1.png"
-                  class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-
-            <!-- Card 5 -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
-              >
-                The analytics feature helped me grow my revenue by 30% in just
-                two months. Highly recommended!
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    James Anderson
-                  </h4>
-                  <p class="text-white text-sm">Business Owner</p>
-                </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-2.png"
-                  class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-
-            <!-- Card 6 -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
-              >
-                Finally a platform that understands what creators need. No
-                hidden fees, just pure value.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">Ethan Hunt</h4>
-                  <p class="text-white text-sm">Content Creator</p>
-                </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-3.png"
-                  class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-
-            <!-- DUPLICATE SET (Agar tidak ada gap) -->
-            <!-- Clone Card 4 -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
-              >
-                Seamless integration with my existing workflow. I can finally
-                manage communities without headache.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    Sarah Jenkins
-                  </h4>
-                  <p class="text-white text-sm">Community Lead</p>
-                </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-1.png"
-                  class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-
-            <!-- Clone Card 5 -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
-              >
-                The analytics feature helped me grow my revenue by 30% in just
-                two months. Highly recommended!
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">
-                    James Anderson
-                  </h4>
-                  <p class="text-white text-sm">Business Owner</p>
-                </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-2.png"
-                  class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-
-            <!-- Clone Card 6 -->
-            <article
-              class="flex-none w-[350px] md:w-[430px] bg-[#1E222F] rounded-[24px] p-5 flex flex-col gap-[16px] text-left"
-            >
-              <div class="flex gap-1 text-[#FF5B29]">
-                <img alt="Bintang" src="src/assets/images/icons/star.svg" /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img
-                  alt="Bintang"
-                  src="src/assets/images/icons/star.svg"
-                /><img alt="Bintang" src="src/assets/images/icons/star.svg" />
-              </div>
-              <p
-                class="text-white font-medium leading-relaxed text-[16px] min-h-[78px]"
-              >
-                Finally a platform that understands what creators need. No
-                hidden fees, just pure value.
-              </p>
-              <hr class="w-full h-px border-0 bg-[#2B3245]" />
-              <div class="flex items-center justify-between">
-                <div>
-                  <h4 class="text-white font-semibold text-base">Ethan Hunt</h4>
-                  <p class="text-white text-sm">Content Creator</p>
-                </div>
-                <img
-                  alt="Bintang"
-                  src="src/assets/images/photos/people-3.png"
-                  class="w-[50px] h-[50px] rounded-full border-2 border-[#2B3245]"
-                />
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </body>
 </html>
