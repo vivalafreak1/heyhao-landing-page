@@ -119,14 +119,29 @@
       <div
         class="relative w-full max-w-[1176px] mx-auto mt-[36px] px-4 md:px-0"
       >
-        <!-- 1. Glowing Circle (Kiri Atas) -->
+        <!-- 1. Glowing Circle (CSS Masking Technique - Best for Ring Glow) -->
         <div
           class="absolute -left-[20%] -top-[10%] md:left-[67px] md:-top-[374px] w-[140%] md:w-[1177px] h-[140%] md:h-[1177px] z-[-1] pointer-events-none"
         >
-          <!-- Tailwind conversion of .glowing-circle css -->
-          <div
-            class="w-full h-full rounded-full border-[20px] md:border-[50px] border-transparent blur-[40px] md:blur-[60px] bg-[linear-gradient(#fff,#fff)_padding-box,linear-gradient(180deg,rgba(22,93,255,0.21)_0%,rgba(22,93,255,0.03)_100%)_border-box]"
-          ></div>
+          <!-- Container untuk Blur -->
+          <div class="w-full h-full blur-[80px] md:blur-[100px] opacity-70">
+            <!-- Lingkaran dengan Gradient Border -->
+            <div
+              class="w-full h-full rounded-full border-[40px] border-transparent"
+              style="
+                background: linear-gradient(
+                    180deg,
+                    rgba(22, 93, 255, 0.4) 0%,
+                    rgba(22, 93, 255, 0.05) 100%
+                  )
+                  border-box;
+                -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+                  linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+              "
+            ></div>
+          </div>
         </div>
 
         <!-- 2. Main Background Box (Gradient & Border) -->
@@ -141,7 +156,7 @@
 
           <!-- Inner Blue Circle Decor -->
           <div
-            class="absolute w-[120%] md:w-[1177px] h-[120%] md:h-[1177px] -left-[10%] md:left-[33px] -top-[5%] md:-top-[152px] rounded-full border-[20px] md:border-[50px] border-[#165DFF]/20 blur-[40px] md:blur-[80px]"
+            class="absolute w-[120%] md:w-[1177px] h-[120%] md:h-[1177px] -left-[10%] md:left-[33px] -top-[5%] md:-top-[152px] rounded-full border-[20px] md:border-[50px] border-[#165DFF]/1 blur-[40px] md:blur-[80px]"
           ></div>
         </div>
       </div>
